@@ -1,0 +1,9 @@
+.typography{
+    font-family: 'Raleway', sans-serif;
+    &__regular{
+        font-weight: 300;
+    }
+    &__bold{
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,20 @@
+@import "abstracts";
+
+.header {
+  width: 100%;
+  height: 50px;
+  &__wrapper {
+  @include display_flex(flex-end, center);
+    width: 100%;
+margin: auto;
+    max-width: 1200px;
+  }
+  &__currencies {
+    @include display_flex(space-between, center);
+    height: 25px;
+    width: 400px;
+  }
+  &__currency {
+    height: 100%;
+  }
+}
