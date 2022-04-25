@@ -22,3 +22,13 @@
         margin-left: 50px;
     }
 }
+
+@media screen and (max-width: 1240px){
+  .converter{
+    width: calc(100% - 40px);
+
+    &__amountField{
+        width: 50%;
+    }
+  }
+}
