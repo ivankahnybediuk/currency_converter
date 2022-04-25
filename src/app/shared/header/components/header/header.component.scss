@@ -22,3 +22,9 @@
   }
 }
 
+@media screen and (max-width: 1240px){
+  .header__wrapper{
+    max-width: calc(100% - 20px);
+  }
+}
+

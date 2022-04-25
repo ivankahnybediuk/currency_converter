@@ -26,3 +26,9 @@
 .selected{
     color: $main-green;
 }
+
+@media screen and (max-width: 1240px){
+  .dropdown{
+    max-height: 200px;
+  }
+}
