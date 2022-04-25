@@ -1,0 +1,9 @@
+<ul class="dropdown">
+    <li 
+        *ngFor = "let item of listItem" 
+        class = "dropdown__item" 
+        [ngClass]="{'selected' : item === selectedItem}"
+        (click) = "emitClickOnItem(item)">
+        <ng-template *ngTemplateOutlet="renderItemTemplate; context: {item: item}"></ng-template>
+    </li>
+</ul>

@@ -1,0 +1,16 @@
+@import "abstracts";
+
+.customInput{
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    padding: 10px 10px;
+    border: 2px solid $input-blue;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.customInput:focus{
+    border: 2px solid $main-green;
+    outline: none;
+}

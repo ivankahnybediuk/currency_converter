@@ -1,0 +1,19 @@
+
+.arrowButton{
+    width: 100%;
+
+    img{
+        width: 100%;
+        cursor: pointer;
+    }
+}
+.top{
+    transition: all linear .1s;
+    display: block;
+}
+
+.bottom{
+    transform: rotate(180deg);
+    transition: all linear .1s;
+    display: block;
+}

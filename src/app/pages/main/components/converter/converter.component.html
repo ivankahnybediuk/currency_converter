@@ -1,0 +1,34 @@
+<div class="converter" >
+    <div class="converter__currency inputCurrency" *ngIf="selectedInputCurrency">
+        <app-custom-select
+        [itemsList] = "ExchangeRateService.currencyRates$ | async"
+        [selectedItem]="selectedInputCurrency"
+        [renderItemTemplate] = "selectedCurrency"
+        (clickOnItem) = "converterService.selectInputCurrency($event)"
+        ></app-custom-select>
+        <app-custom-input
+            class = "converter__amountField"
+            (onKeyUp) = "convertAmountFromInput($event.target.value)"
+            [value]="inputCurrencyAmount"
+        >
+        </app-custom-input>
+    </div>
+    <div class="converter__currency outputCurrency" *ngIf="selectedInputCurrency">
+        <app-custom-select 
+            [itemsList]="ExchangeRateService.currencyRates$ | async" 
+            [selectedItem]="selectedOutputCurrency"
+            [renderItemTemplate]="selectedCurrency" 
+            (clickOnItem)="converterService.selectOutputCurrency($event)">
+        </app-custom-select>
+        <app-custom-input 
+            class="converter__amountField" 
+            (onKeyUp) = "convertAmountFromOutput($event.target.value)"
+            [value]="outputCurrencyAmount">
+        </app-custom-input>
+    </div>
+</div>
+
+
+<ng-template #selectedCurrency  let-currency = "item">
+    <span>{{currency.cc}}</span>
+</ng-template>

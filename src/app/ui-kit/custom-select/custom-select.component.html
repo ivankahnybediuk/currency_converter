@@ -1,0 +1,22 @@
+<div class="select typography typography--bold">
+    <div class="select__wrapper" (click) ="toggleDropdown()">
+        <div class="select__title" >
+            <ng-container *ngTemplateOutlet="renderItemTemplate; context: {item: selectedItem}">
+            </ng-container>
+        </div>
+        <app-arrow-button class="select__button" (arrowClick)="toggleDropdown()"
+            [direction]="isOpenDropdown ? 'top' : 'bottom'">
+        </app-arrow-button>
+    </div>
+
+    <app-dropdown 
+        class = "dropdown"
+        (clickOnItem) = "emitOnClickItem($event)"
+        [ngClass]="{'dropdown--open': isOpenDropdown, 'dropdown--closed' : !isOpenDropdown}"
+        [listItem]="itemsList" 
+        [renderItemTemplate]="renderItemTemplate"
+        [selectedItem] = "selectedItem"
+    >
+    </app-dropdown>
+</div>
+
