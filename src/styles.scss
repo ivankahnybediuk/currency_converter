@@ -1,2 +1,33 @@
 @import "typography";
+@import "nullStyle";
+@import "abstracts";
 
+body{
+    background-color: $main-blue;
+    background-image: url(assets/img/bg_img.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    min-height: 100vh;
+}
+
+
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: $main-green transparent;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  body ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  body ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body ::-webkit-scrollbar-thumb {
+    background-color: $main-green;
+    border-radius: 2px;
+    border: 0px solid transparent;
+  }

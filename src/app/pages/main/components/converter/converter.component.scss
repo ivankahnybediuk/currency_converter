@@ -1,0 +1,24 @@
+@import 'abstracts';
+
+.converter{
+    width: 500px;
+    background-color: $main-white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px $shadow-black;
+    margin: auto;
+    padding: 20px;
+
+    &__currency{
+        @include display_flex();
+        margin-top: 30px;
+    }
+
+     &__currency:last-child{
+        margin-bottom: 30px;
+    }
+
+    &__amountField{
+        width: auto;
+        margin-left: 50px;
+    }
+}

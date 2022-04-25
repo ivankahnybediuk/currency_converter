@@ -1,13 +1,10 @@
 <header class= "header">
     <div class="header__wrapper">
         <div class="header__currencies">
-            <div class="header__currency"
-                *ngFor="let currency of currencyService.currenciesDefault">
-                <app-currency
-                  class = "typography typography__bold"
-                  *ngIf = "currency.name != 'UAH'"
-                  [currency] = "currency">
-                </app-currency>
+            <div class="header__currency typography typography--bold"
+            *ngFor="let currency of mainCurrencies"
+            >
+            {{currency.cc}} - {{currency.rateOutput}}
             </div>
         </div>
     </div>

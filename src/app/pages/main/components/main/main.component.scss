@@ -1,0 +1,16 @@
+@import 'abstracts';
+
+.main{
+    width: 100%;
+
+    &__wrapper{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .converter{
+        display: block;
+        margin-top: 15vh;
+    }
+}

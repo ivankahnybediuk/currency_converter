@@ -1,0 +1,28 @@
+@import "abstracts";
+
+.dropdown{
+    width: 100%;
+    background-color: $main-white;
+    padding: 10px;
+    height: fit-content;
+    max-height: 300px;
+    overflow-y: scroll;
+    box-shadow: 0 5px 10px $shadow-black;
+    border-radius: 10px;
+
+    &__item{
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    &__item:hover{
+        color: $main-green;
+        border: 1px solid $main-green;
+        border-radius: 5px;
+    }
+}
+
+.selected{
+    color: $main-green;
+}
